@@ -5,6 +5,7 @@ const observerGlance = new IntersectionObserver((focus, observer) => {
         if (!eachImage.isIntersecting) return;
         const sizeChange = eachImage.target;
         sizeChange.src = sizeChange.src.replace("w=10&","w=1000&");
+        observerGlance.unobserve(sizeChange);
     })
 },{})
 
